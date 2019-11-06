@@ -47,8 +47,13 @@
             <form>
                 <div class="form-row">
                     <div class="col">
-                        <input type="text" class="form-control" id="symbolInput"
-                            placeholder="Enter Stock Symbol (ex. MSFT)">
+                        <!--<input type="text" class="form-control" id="symbolInput"
+                            placeholder="Enter Stock Symbol (ex. MSFT)">!-->
+                            <select class="form-control" id="symbolInput">
+                                {{#each symbols}}
+                                {{> symbol-block}}
+                                {{/each}}
+                            </select>
                     </div>
                 </div>
                 <div class="form-row">

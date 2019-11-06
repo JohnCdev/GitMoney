@@ -25,7 +25,26 @@ module.exports = function (app) {
 
   //historical-search
   app.get("/search-historical", (req, res) => {
-    res.render("search-historical");
+    db.stockEntries
+      .findAll({
+        attributes: ["symbol"],
+        where: {
+          specificDate: "2017-01-03"
+        }
+      })
+      .then(function (data) {
+        var symbolArr = []; 
+        for (var i = 0; i < data.length;i++){
+          var symbolObj = {
+            symbol: data[i].dataValues.symbol
+          };
+          symbolArr.push(symbolObj);
+        }
+        var returnObj = {
+          symbols: symbolArr
+        };
+        res.render("search-historical",returnObj);
+      });
   });
 
   // Render 404 page for any unmatched routes

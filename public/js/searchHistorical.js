@@ -16,7 +16,7 @@ var searchSubmit = () => {
     from: $("#fromYearSelect :selected").val() + "-" + $("#fromMonthSelect :selected").val() + "-" +$("#fromDaySelect :selected").val(),
     to: $("#toYearSelect :selected").val() + "-" + $("#toMonthSelect :selected").val() + "-" +$("#toDaySelect :selected").val(),
   };
-  
+
   if (moment(searchObj.from) > moment(searchObj.to)){
     return $("#invalidDate").modal("show");
   }
@@ -29,11 +29,6 @@ var searchSubmit = () => {
     url: "/api/historicalsearch",
     data: searchObj
   }).then(response => {
-    //console.log(response);
-    
-    /*if (typeof response === undefined) {
-      return $("#invalidSymbol").modal("show");
-    }*/
 
     const dateArr = []; dateArr.push("x");
     const closeArr = []; closeArr.push("Close");
@@ -63,7 +58,7 @@ var searchSubmit = () => {
       .append("<th scope='col'>Final Close($)</th>")
       .append("<th scope='col'>Change(%)</th>")
       .append("<th scope='col'>Overall High($)</th>")
-      .append("<th scope='col'>Overall Low(%)</th>")
+      .append("<th scope='col'>Overall Low($)</th>")
       .append("<th scope='col'>Highest Volume</th>");
 
     $("#meta-body").append("<tr><td>" + response.open + "</td><td>" + response.close + "</td><td>" +
