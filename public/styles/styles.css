@@ -31,13 +31,24 @@
   padding-left: 3em;
 }
 
+#history-jumbotron-text {
+  background-color:#000 !important; 
+  position: relative;
+  z-index: -3;
+  height: 25rem;
+  padding-left: 3em;
+  color: #fff;
+
+}
+
+
 #favorite-header {
   padding-top: .4rem;
 }
 
 .video-background {
   position: relative;
-  float: right;
+  float: left;
   overflow: hidden;
   z-index: -2;
   width: auto;
@@ -362,4 +373,5 @@ color: #fff;
     font-family: 'Roboto Slab', serif;
       font-size:5vw;
     }
+
 }
