@@ -25,7 +25,7 @@ module.exports = function (app) {
       .then(function (data) {
         var stockArray = [];
         var currentHigh = 0;
-        var currentLow = 1000;
+        var currentLow = 10000;
         var highVolume = 0;
         for (var i = 0; i < data.length; i++) {
           var singleDay = data[i].dataValues;
