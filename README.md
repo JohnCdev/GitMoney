@@ -1,7 +1,7 @@
 # GitMoney
 
 ## Deployed URL
-https://project-2-uncc.herokuapp.com/search-historical
+https://project-2-uncc.herokuapp.com
 
 ## Description:
 A Full-Stack application that allows users to interact with live and historical stock data in a friendly and visual way including charts and tables. View current and past data about stock(s) that a user is interested in, sorted by daily, weekly, or monthly tracking. View historical data for years of information. Or make a dashboard with your favorited stocks with custom notes and minute-to-minute charts.
